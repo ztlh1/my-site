@@ -5,8 +5,8 @@
    ========================================================================== */
 
 @font-face {
-  font-family: "Cutive";
-  src: url("fonts/cutive.woff2") format("woff2");
+  font-family: "Special Elite";
+  src: url("fonts/specialelite.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -34,8 +34,8 @@ body {
   margin: 0;
   background: #4a5a45; /* shows for a moment while the photo loads */
   color: var(--ink);
-  font-family: "Cutive", "American Typewriter", "Courier New", serif;
-  font-size: 1.15rem;
+  font-family: "Special Elite", "American Typewriter", "Courier New", monospace;
+  font-size: 1.25rem;
   line-height: 1.55;
 }
 
@@ -127,7 +127,7 @@ button:focus-visible {
 
 .card p {
   margin: 0 0 0.9rem;
-  font-size: clamp(1rem, 3.9vw, 1.2rem);
+  font-size: clamp(1.05rem, 4.2vw, 1.3rem);
 }
 
 .card p:last-child {
@@ -198,7 +198,7 @@ button:focus-visible {
   margin-top: 1.25rem;
   padding: 0.6rem 1.4rem;
   text-align: center;
-  font-size: clamp(0.95rem, 3.6vw, 1.15rem);
+  font-size: clamp(1rem, 3.9vw, 1.25rem);
 }
 
 /* Instagram + LinkedIn, top right of the home page */
@@ -271,7 +271,7 @@ button:focus-visible {
   align-items: center;
   gap: 0.1rem;
   padding: 0.2rem;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
 }
 
 .side-switch a {
@@ -305,7 +305,7 @@ button:focus-visible {
   margin: 0;
   padding: 0.65rem 1.4rem;
   list-style: none;
-  font-size: clamp(1rem, 1.8vw, 1.5rem);
+  font-size: clamp(1.05rem, 1.9vw, 1.6rem);
 }
 
 .pages li + li::before {
