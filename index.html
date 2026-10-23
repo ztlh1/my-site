@@ -4,138 +4,58 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zach | zjk.fyi</title>
-  <meta name="description" content="Zach's site is a work in progress. Find me on Instagram and LinkedIn.">
-  <meta name="theme-color" content="#9ab09d">
-
-  <!-- Link preview (what shows when someone shares the address in a text or message) -->
+  <meta name="description" content="Zach&#x27;s site: professional pages for work, amateur pages for the love of it.">
   <meta property="og:title" content="Zach">
-  <meta property="og:description" content="Work in progress. Find me on Instagram and LinkedIn.">
+  <meta property="og:description" content="Professional pages for work. Amateur pages for the love of it.">
   <meta property="og:image" content="https://zjk.fyi/forest.jpg">
   <meta property="og:url" content="https://zjk.fyi/">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --card: #9ab09d;
-      --ink: #000;
-    }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background: #4a5a45; /* shows for a moment while the photo loads */
-      color: var(--ink);
-      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
-    }
-
-    /* Full-screen photo behind everything */
-    .bg {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    /* Centers the card, sitting slightly above the middle like in the design */
-    .stage {
-      position: relative;
-      min-height: 100vh;
-      min-height: 100dvh;
-      display: grid;
-      place-items: center;
-      padding: 1.5rem 1.25rem 18vh;
-    }
-
-    .card {
-      width: min(100%, 30rem);
-      padding: 1.9rem 1.5rem 1.6rem;
-      background: var(--card);
-      border-radius: 2.75rem;
-      text-align: center;
-    }
-
-    h1 {
-      margin: 0 0 1.4rem;
-      font-size: clamp(1.3rem, 5.4vw, 1.8rem);
-      font-weight: 400;
-      line-height: 1.25;
-    }
-
-    .icons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    /* Each icon is a link. The padding makes the tap area comfortably big on a phone. */
-    .icons a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.5rem;
-      border-radius: 0.9rem;
-      color: var(--ink);
-    }
-
-    .icons a:hover {
-      opacity: 0.6;
-    }
-
-    .icons a:focus-visible {
-      outline: 3px solid var(--ink);
-      outline-offset: 1px;
-    }
-
-    .icons svg,
-    .icons img {
-      display: block;
-      height: 3.5rem;
-    }
-
-    .icons svg {
-      width: 3.5rem;
-    }
-
-    .icons img {
-      width: auto;
-    }
-  </style>
+  <meta name="theme-color" content="#9ab09d">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="preload" href="/fonts/cutive.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/menu.js" defer></script>
 </head>
 <body>
-  <img class="bg" src="forest.jpg" alt="" width="2400" height="1600">
+  <picture>
+    <source media="(max-width: 700px)" srcset="/forest-mobile.webp" type="image/webp">
+    <source media="(max-width: 700px)" srcset="/forest-mobile.jpg" type="image/jpeg">
+    <img class="bg" src="/forest.jpg" alt="" width="2400" height="1600">
+  </picture>
 
-  <main class="stage">
-    <div class="card">
-      <h1>I’m working on it…</h1>
+  <main class="home">
+    <h1 class="visually-hidden">Zach</h1>
 
-      <div class="icons">
-        <!-- Each icon is a link. To change where one goes, edit the address inside its href="..." -->
-        <a href="https://www.instagram.com/seethelighthouse/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <svg viewBox="0 0 160.5 160.5" aria-hidden="true" focusable="false">
+    <div class="social">
+      <a href="https://www.instagram.com/seethelighthouse/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)">
+        <svg viewBox="0 0 160.5 160.5" aria-hidden="true" focusable="false">
             <g fill="none" stroke="currentColor">
               <rect x="7.5" y="7.5" width="145.5" height="145.5" rx="39.5" stroke-width="15"/>
               <circle cx="80.3" cy="80.25" r="34" stroke-width="14.4"/>
             </g>
             <circle cx="123" cy="37.3" r="9.7" fill="currentColor"/>
           </svg>
-        </a>
-
-        <a href="https://www.linkedin.com/in/zjkramer/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <img src="linkedin.png" alt="" width="336" height="312">
-        </a>
-      </div>
+      </a>
+      <a href="https://www.linkedin.com/in/zjkramer/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)">
+        <img src="/linkedin.png" alt="" width="336" height="312">
+      </a>
     </div>
+
+    <a class="card" href="/resume/">
+      <h2>Professional Pages</h2>
+      <p>Interested in hiring me, or helping me find a job?</p>
+      <p>Qualifications, work history, work I seek, etc.</p>
+    </a>
+
+    <a class="card" href="/now/">
+      <h2>Amateur Pages</h2>
+      <p>An amateur pursues an avocation for the love of it; independent of income</p>
+      <p>Goings on, arts/culture, links, ephemera, etc.</p>
+    </a>
+
+    <p class="contact pill">Contact: <a href="mailto:zjkramer89@gmail.com">zjkramer89@gmail.com</a></p>
   </main>
 </body>
 </html>
