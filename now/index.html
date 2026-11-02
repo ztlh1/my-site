@@ -11,9 +11,9 @@
   <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <script>document.documentElement.classList.add("js");</script>
-  <link rel="preload" href="/fonts/specialelite.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/style.css?v=3">
-  <script src="/menu.js?v=3" defer></script>
+  <link rel="preload" href="/fonts/cutivemono.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css?v=4">
+  <script src="/menu.js?v=4" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -29,11 +29,19 @@
       <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 6.5h16M4 12h16M4 17.5h16"/></svg>
       <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
-      <div class="menu" id="menu">
+      <div class="menu" id="menu" data-view="am" data-page-side="am">
         <nav class="side-switch pill" aria-label="Site sections">
-          <a href="/resume/">Professional</a><span class="sep" aria-hidden="true">|</span><a href="/now/" aria-current="true">Amateur</a>
+          <a href="/resume/" data-side="pro">Professional</a><span class="sep" aria-hidden="true">|</span><a href="/now/" data-side="am" aria-current="true">Amateur</a>
         </nav>
-        <nav class="pages pill" aria-label="Pages">
+        <nav class="pages pill" data-side="pro" aria-label="Professional pages">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/resume/">Resume/Work History</a></li>
+            <li><a href="/seeking/">Types of Work I seek</a></li>
+            <li><a href="/help/">How I Can Help You</a></li>
+          </ul>
+        </nav>
+        <nav class="pages pill" data-side="am" aria-label="Amateur pages">
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/now/" aria-current="page">Now</a></li>

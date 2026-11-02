@@ -10,7 +10,33 @@
     return html.classList.contains("menu-open");
   }
 
+  var switchLinks = menu.querySelectorAll(".side-switch a[data-side]");
+  var mq = window.matchMedia("(max-width: 700px)");
+
+  // Which side's page list the open menu shows (phones only)
+  function setView(side) {
+    menu.setAttribute("data-view", side);
+    for (var i = 0; i < switchLinks.length; i++) {
+      if (switchLinks[i].getAttribute("data-side") === side) {
+        switchLinks[i].setAttribute("aria-current", "true");
+      } else {
+        switchLinks[i].removeAttribute("aria-current");
+      }
+    }
+  }
+
+  // On phones the Professional | Amateur switch swaps the list instead of navigating
+  for (var i = 0; i < switchLinks.length; i++) {
+    switchLinks[i].addEventListener("click", function (e) {
+      if (!mq.matches) return;
+      e.preventDefault();
+      setView(this.getAttribute("data-side"));
+    });
+  }
+
   function setOpen(open) {
+    // Every open or close starts from the side of the page you are on
+    setView(menu.getAttribute("data-page-side"));
     html.classList.toggle("menu-open", open);
     btn.setAttribute("aria-expanded", open ? "true" : "false");
     btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
@@ -39,7 +65,6 @@
   });
 
   // Rotating the phone or resizing the window should not leave it open
-  var mq = window.matchMedia("(max-width: 700px)");
   if (mq.addEventListener) {
     mq.addEventListener("change", function () { setOpen(false); });
   } else if (mq.addListener) {

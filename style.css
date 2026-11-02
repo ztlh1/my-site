@@ -5,8 +5,8 @@
    ========================================================================== */
 
 @font-face {
-  font-family: "Special Elite";
-  src: url("fonts/specialelite.woff2") format("woff2");
+  font-family: "Cutive Mono";
+  src: url("fonts/cutivemono.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -34,9 +34,16 @@ body {
   margin: 0;
   background: #4a5a45; /* shows for a moment while the photo loads */
   color: var(--ink);
-  font-family: "Special Elite", "American Typewriter", "Courier New", monospace;
+  font-family: "Cutive Mono", "American Typewriter", "Courier New", monospace;
+  /* Cutive Mono has only one weight; a thin outline gives it more body */
+  -webkit-text-stroke: 0.6px currentColor;
   font-size: 1.25rem;
   line-height: 1.55;
+}
+
+h1,
+h2 {
+  -webkit-text-stroke: 0.8px currentColor;
 }
 
 a {
@@ -291,6 +298,12 @@ button:focus-visible {
 
 .side-switch .sep {
   padding: 0 0.05rem;
+}
+
+/* Only the list for the side being viewed is shown (menu.js switches it on phones) */
+.menu[data-view="pro"] .pages[data-side="am"],
+.menu[data-view="am"] .pages[data-side="pro"] {
+  display: none;
 }
 
 /* Home | Now | Photos ... */
